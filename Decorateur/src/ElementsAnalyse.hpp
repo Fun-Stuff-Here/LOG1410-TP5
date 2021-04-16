@@ -3,6 +3,7 @@
 // File ElementsAnalyse.h
 // Auteur : Esme Genereux & Nicolas Depelteau
 ///////////////////////////////////////////////////////////////////
+
 #pragma once
 #ifndef ELEMENTSANALYSE_H
 #define ELEMENTSANALYSE_H
@@ -14,10 +15,10 @@ class ElementAnalyse : public RetroactionAbs
 {
 
 protected:
-    RetroactionAbs* retroaction_;
+    RetroactionAbs *retroaction_;
 
 public:
-    ElementAnalyse(RetroactionAbs* retroaction);
+    ElementAnalyse(RetroactionAbs *retroaction);
     void ajouterObjectifApprentissage(ObjectifApprentissage &objectifApprentissage) override;
     EnregistrementPtr lireEnregistrement() override;
     PartitionPtr lirePartition() override;
@@ -31,8 +32,8 @@ private:
     std::string commentaire_;
 
 public:
-    CommentaireConstructif(RetroactionAbs* retroaction, std::string& commentaire);
-    std::string lireCommentaire() const; 
+    CommentaireConstructif(RetroactionAbs *retroaction, std::string &commentaire);
+    std::string lireCommentaire() const;
     ~CommentaireConstructif() = default;
 };
 
@@ -44,10 +45,9 @@ private:
     listeCouleur couleurs_;
 
 public:
-    CodeCouleurLogique(RetroactionAbs* retroaction);
+    CodeCouleurLogique(RetroactionAbs *retroaction);
     listeCouleur lireCouleurs() const;
     ~CodeCouleurLogique() = default;
 };
 
-
-#endif // !ELEMENTSANALYSE_H
+#endif

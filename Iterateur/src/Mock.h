@@ -4,36 +4,28 @@
 // Auteur : Esme Genereux & Nicolas Depelteau
 ///////////////////////////////////////////////////////////////////
 #pragma once
-
 #ifndef MOCKS_H
 #define MOCKS_H
 
-class Enregistrement
+class NoteMusicale
 {
 public:
-    Enregistrement()=default;
-    ~Enregistrement()=default;
+    NoteMusicale() = default;
+    ~NoteMusicale() = default;
 };
 
-class ObjectifApprentissage
+class SymboleNote
 {
 public:
-    ObjectifApprentissage()=default;
-    ~ObjectifApprentissage()=default;
+    SymboleNote() = default;
+    ~SymboleNote() = default;
 };
 
 class Partition
 {
 public:
-    Partition()=default;
-    ~Partition()=default;
-};
-
-class ProfilProfesseur
-{
-public:
-    ProfilProfesseur()=default;
-    ~ProfilProfesseur()=default;
+    Partition() = default;
+    ~Partition() = default;
 };
 
 #endif

@@ -1,24 +1,17 @@
 #include "ElementsAnalyse.hpp"
 
 ElementAnalyse::ElementAnalyse(RetroactionAbs*retroaction)
-:retroaction_{retroaction}
-{}
-
-
+: retroaction_{retroaction} {}
 
 CommentaireConstructif::CommentaireConstructif(RetroactionAbs* retroaction, std::string& commentaire)
-:ElementAnalyse(retroaction), commentaire_{commentaire}
-{}
-
+: ElementAnalyse(retroaction), commentaire_{commentaire} {}
 
 std::string CommentaireConstructif::lireCommentaire() const
 {
     return commentaire_;
 }
 
-
-CodeCouleurLogique::CodeCouleurLogique(RetroactionAbs* retroaction)
-:ElementAnalyse(retroaction)
+CodeCouleurLogique::CodeCouleurLogique(RetroactionAbs* retroaction) : ElementAnalyse(retroaction)
 {
     /*Le code pour determiner quel couleur attribuer aux objectif vient ici*/
     couleurs_ = {"Vert","Jaune","Rouge"};
