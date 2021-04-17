@@ -1,15 +1,15 @@
 #pragma once
 
-#include "Mediateur.h"
+#include "Gestionnaire.h"
 #include <iostream>
 
 class ProfilAbstrait
 {
 protected:
-    Mediateur *mediateur_;
+    Gestionnaire *gestionnaire_;
 
 public:
-    ProfilAbstrait(Mediateur *mediateur = nullptr);
-    void setMediateur(Mediateur *mediateur);
+    ProfilAbstrait(Gestionnaire *gestionnaire = nullptr);
+    void setMediateur(Gestionnaire *gestionnaire);
     virtual ~ProfilAbstrait() = default;
 };

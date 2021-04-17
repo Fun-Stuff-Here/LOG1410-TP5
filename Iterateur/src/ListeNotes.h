@@ -9,25 +9,20 @@
 #ifndef LISTE_NOTES_H
 #define LISTE_NOTES_H
 
-#include "Mock.h"
-#include <vector>
+#include "Aggregat.h"
 
-class ListeNotes 
+class ListeNotes : public Aggregat<NoteMusicale>
 {
-    using Liste = std::vector<NoteMusicale>;
-    Liste notesDeMusique_;
+    Aggregat &notesDeMusique_;
 
-public:
-    using iterateurConst = Liste::const_iterator;
+public:;
+    NoteMusicale &operator[](int index) const;
+    NoteMusicale &operator++(int index) const;
+    NoteMusicale &operator--(int index) const;
 
-    NoteMusicale &operator[](int index);
-
-    /*
-    ** L'itérateur constant permet d'accéder a l'élément sans le modifier
-    */
-    iterateurConst creerIterateurConstant();
-    iterateurConst cbegin();
-    iterateurConst cend();
+    std::vector<NoteMusicale>::const_iterator creerIterateurConst() const override;
+    std::vector<NoteMusicale>::const_iterator cbegin() const override;
+    std::vector<NoteMusicale>::const_iterator cend() const override;
 };
 
 #endif

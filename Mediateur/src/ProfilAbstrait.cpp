@@ -1,8 +1,8 @@
 #include "ProfilAbstrait.h"
 
-ProfilAbstrait::ProfilAbstrait(Mediateur *mediateur) : mediateur_(mediateur) {}
+ProfilAbstrait::ProfilAbstrait(Gestionnaire *gestionnaire) : gestionnaire_(gestionnaire) {}
 
-void ProfilAbstrait::setMediateur(Mediateur *mediateur)
+void ProfilAbstrait::setGestionnaire(Gestionnaire *gestionnaire)
 {
-    mediateur_ = mediateur;
+    gestionnaire_ = gestionnaire;
 }

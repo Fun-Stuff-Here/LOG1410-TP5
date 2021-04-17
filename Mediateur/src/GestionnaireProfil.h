@@ -1,16 +1,16 @@
 #pragma once
 
-#include "Mediateur.h"
+#include "GestionnaireProfil.h"
 #include "ProfilAbstrait.h"
 #include "ProfilProfesseur.h"
 #include "ProfilEtudiant.h"
 
-class MediateurConcret : public Mediateur
+class GestionnaireProfil : public Gestionnaire
 {
     ProfilProfesseur *profilProfesseur_;
     ProfilEtudiant *profilEtudiant_;
 
 public:
-    MediateurConcret(ProfilProfesseur *profilProfesseur, ProfilEtudiant *profilEtudiant);
+    GestionnaireProfil(ProfilProfesseur *profilProfesseur, ProfilEtudiant *profilEtudiant);
     void informer(ProfilAbstrait *expediteur, std::string message) const override;
 };

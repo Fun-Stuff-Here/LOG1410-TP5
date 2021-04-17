@@ -1,21 +1,31 @@
 #include "ListeNotes.h"
 
-NoteMusicale &ListeNotes::operator[](int index) 
+NoteMusicale &ListeNotes::operator[](int index) const
 {
     return notesDeMusique_[index];
 }
 
-ListeNotes::iterateurConst ListeNotes::creerIterateurConstant()
+NoteMusicale &ListeNotes::operator++(int index) const
 {
-    return notesDeMusique_.cbegin();
+    return notesDeMusique_[++index];
 }
 
-ListeNotes::iterateurConst ListeNotes::cbegin()
+NoteMusicale &ListeNotes::operator--(int index) const
 {
-    return notesDeMusique_.cbegin();
+    return notesDeMusique_[--index];
 }
 
-ListeNotes::iterateurConst ListeNotes::cend()
+std::vector<NoteMusicale>::const_iterator ListeNotes::creerIterateurConst() const
 {
-    return notesDeMusique_.cend();
+    return notesDeMusique_.begin();
+}
+
+std::vector<NoteMusicale>::const_iterator ListeNotes::cbegin() const
+{
+    return notesDeMusique_.begin();
+}
+
+std::vector<NoteMusicale>::const_iterator ListeNotes::cend() const
+{
+    return notesDeMusique_.end();
 }
