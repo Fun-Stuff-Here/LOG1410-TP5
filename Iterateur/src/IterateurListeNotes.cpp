@@ -1,4 +1,4 @@
-#include "IterateurListeNotesMusicales.h"
+#include "IterateurListeNotes.h"
 
 IterateurListeNotes::IterateurListeNotes(ListeNotes &listeNotes, int position)
     : listeNotes_(listeNotes), position_(position) {}

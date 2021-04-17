@@ -10,10 +10,11 @@
 #define LISTE_NOTES_H
 
 #include "Mock.h"
+#include <vector>
 
 class ListeNotes 
 {
-    using Liste = std::array<NoteMusicale, 7>;
+    using Liste = std::vector<NoteMusicale>;
     Liste notesDeMusique_;
 
 public:

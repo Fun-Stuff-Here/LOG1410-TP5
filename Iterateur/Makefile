@@ -8,7 +8,7 @@ CXXFLAGS = -std=c++17 -Wall -g
 LDFLAGS = 
 
 # Makefile settings - Can be customized.
-APPNAME = singleton
+APPNAME = Iterateur
 EXT = .cpp
 SRCDIR = src
 OBJDIR = obj
@@ -77,7 +77,7 @@ cleandepw:
 test: out/tests
 	./out/tests
 
-out/tests: test/tests.o obj/SingletonGoF.o
+out/tests: test/tests.o obj/IterateurGoF.o
 	$(CC) $(CXXFLAGS) -o $@ $^ $(LDFLAGS) 
 
 test/tests.o: test/tests.cpp $(wildcard $(SRCDIR)/*)

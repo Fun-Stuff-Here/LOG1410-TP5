@@ -10,11 +10,11 @@
 
 class IterateurListeNotes
 {
-    ListeNotes &ListeNotes_;
+    ListeNotes &listeNotes_;
     int position_;
 
 public:
-    IterateurListeNotes(ListeNotes &ListeNotes, int position);
+    IterateurListeNotes(ListeNotes &listeNotes, int position);
 
     IterateurListeNotes&operator[](int index); //getter for this shit, make it work
 

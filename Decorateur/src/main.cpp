@@ -21,7 +21,6 @@ int main()
     {
         std::cout<<couleur<<std::endl;
     }
-    
 
     return 0;
 }
