@@ -13,7 +13,7 @@
 
 class NotesPartition : public Aggregat<NoteMusicale>
 {
-    Aggregat &notesPartition_;
+    std::vector<NoteMusicale> notesPartition_;
 
 public:;
     NoteMusicale &operator[](int index);

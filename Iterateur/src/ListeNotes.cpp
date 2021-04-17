@@ -1,16 +1,16 @@
 #include "ListeNotes.h"
 
-NoteMusicale &ListeNotes::operator[](int index) const
+NoteMusicale &ListeNotes::operator[](int index)
 {
     return notesDeMusique_[index];
 }
 
-NoteMusicale &ListeNotes::operator++(int index) const
+NoteMusicale &ListeNotes::operator++(int index)
 {
     return notesDeMusique_[++index];
 }
 
-NoteMusicale &ListeNotes::operator--(int index) const
+NoteMusicale &ListeNotes::operator--(int index)
 {
     return notesDeMusique_[--index];
 }

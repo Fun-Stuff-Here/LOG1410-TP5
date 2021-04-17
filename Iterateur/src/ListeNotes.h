@@ -13,12 +13,12 @@
 
 class ListeNotes : public Aggregat<NoteMusicale>
 {
-    Aggregat &notesDeMusique_;
+    std::vector<NoteMusicale> notesDeMusique_;
 
 public:;
-    NoteMusicale &operator[](int index) const;
-    NoteMusicale &operator++(int index) const;
-    NoteMusicale &operator--(int index) const;
+    NoteMusicale &operator[](int index);
+    NoteMusicale &operator++(int index);
+    NoteMusicale &operator--(int index);
 
     std::vector<NoteMusicale>::const_iterator creerIterateurConst() const override;
     std::vector<NoteMusicale>::const_iterator cbegin() const override;
