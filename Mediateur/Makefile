@@ -77,7 +77,7 @@ cleandepw:
 test: out/tests
 	./out/tests
 
-out/tests: test/tests.o obj/MediateurGoF.o
+out/tests: test/tests.o obj/GestionnaireAlerte.o obj/ProfilAbstrait.o obj/ProfilEtudiant.o obj/ProfilProfesseur.o
 	$(CC) $(CXXFLAGS) -o $@ $^ $(LDFLAGS) 
 
 test/tests.o: test/tests.cpp $(wildcard $(SRCDIR)/*)

@@ -8,7 +8,7 @@ int main()
     ProfilEtudiant etudiant1;
     GestionnaireAlerte GestionnaireAlerte(&professeur1, &etudiant1);
     
-    std::cout << "L'étudiant tente de s'enregistrer sur PolyPiano";
+    std::cout << "L'étudiant tente de s'enregistrer sur PolyPiano"<<std::endl;
     etudiant1.enregistrer();
 
     etudiant1.logInEtudiant();
