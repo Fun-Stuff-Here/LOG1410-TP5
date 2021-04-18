@@ -14,18 +14,4 @@ public:
     ~NoteMusicale() = default;
 };
 
-class SymboleNote
-{
-public:
-    SymboleNote() = default;
-    ~SymboleNote() = default;
-};
-
-class Partition
-{
-public:
-    Partition() = default;
-    ~Partition() = default;
-};
-
 #endif

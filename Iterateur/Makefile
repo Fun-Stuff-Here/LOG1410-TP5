@@ -77,7 +77,7 @@ cleandepw:
 test: out/tests
 	./out/tests
 
-out/tests: test/tests.o obj/IterateurGoF.o
+out/tests: test/tests.o  obj/Partition.o 
 	$(CC) $(CXXFLAGS) -o $@ $^ $(LDFLAGS) 
 
 test/tests.o: test/tests.cpp $(wildcard $(SRCDIR)/*)
