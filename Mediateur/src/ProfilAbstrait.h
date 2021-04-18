@@ -1,7 +1,6 @@
 #pragma once
 
 #include "Gestionnaire.h"
-#include <iostream>
 
 class ProfilAbstrait
 {
@@ -10,6 +9,6 @@ protected:
 
 public:
     ProfilAbstrait(Gestionnaire *gestionnaire = nullptr);
-    void setMediateur(Gestionnaire *gestionnaire);
+    void setGestionnaire(Gestionnaire *gestionnaire);
     virtual ~ProfilAbstrait() = default;
 };

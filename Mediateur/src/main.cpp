@@ -1,9 +1,17 @@
-#include <iostream>
-#include <assert.h>
+#include "GestionnaireAlerte.h"
+#include "ProfilEtudiant.h"
+#include "ProfilEtudiant.h"
 
+int main()
+{
+    ProfilProfesseur professeur1;
+    ProfilEtudiant etudiant1;
+    GestionnaireAlerte GestionnaireAlerte(&professeur1, &etudiant1);
+    
+    std::cout << "L'étudiant tente de s'enregistrer sur PolyPiano";
+    etudiant1.enregistrer();
 
+    etudiant1.logInEtudiant();
 
-int main() {
-
-    return 0;
+    professeur1.ajouterDevoir(); 
 }

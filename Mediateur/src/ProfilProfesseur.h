@@ -6,6 +6,7 @@
 class ProfilProfesseur : public ProfilAbstrait
 {
 public:
-    void messageA();
-    void messageB();
+    void ajouterEtudiant();
+    void proposerSuivi();
+    void ajouterDevoir();
 };

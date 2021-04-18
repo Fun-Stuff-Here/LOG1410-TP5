@@ -1,12 +1,19 @@
 #include "ProfilEtudiant.h"
 
-void ProfilEtudiant::messageC()
+void ProfilEtudiant::enregistrer()
 {
-    std::cout << "    Le collegue 1 recoit le message A et en informe le mediateur.\n";
-    mediateur_->informer(this, "A");
+    std::cout << "L'étudiant s'est enregistré";
+    gestionnaire_->informer(this, "Enregistrement Réussi");
 }
 
-void ProfilEtudiant::messageD()
+void ProfilEtudiant::logInEtudiant()
 {
-    std::cout << "    Le collegue 1 recoit le message B.\n";
+    std::cout << "L'étudiant a ouvert l'application";
+    gestionnaire_->informer(this, "L'étudiant est en ligne");
+}
+
+void ProfilEtudiant::remettreDevoir()
+{
+    std::cout << "L'étudiant a remis son devoir";
+    gestionnaire_->informer(this, "Devoir remis");
 }

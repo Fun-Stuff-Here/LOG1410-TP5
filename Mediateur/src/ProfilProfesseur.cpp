@@ -1,12 +1,19 @@
 #include "ProfilProfesseur.h"
 
-void ProfilProfesseur::messageA()
+void ProfilProfesseur::ajouterEtudiant()
 {
-    std::cout << "    Le collegue 1 recoit le message A et en informe le mediateur.\n";
-    gestionnaire_->informer(this, "A");
+    std::cout << "Le professeur ajoute un étudiant a sa liste." << std::endl;
+    gestionnaire_->informer(this, "Etudiant ajouté");
 }
 
-void ProfilProfesseur::messageB()
+void ProfilProfesseur::proposerSuivi()
 {
-    std::cout << "    Le collegue 1 recoit le message B.\n";
+    std::cout << "Le professeur aimerait faire un suivi avec l'étudiant qui est en ligne." << std::endl;
+    gestionnaire_->informer(this, "Proposition suivi");
+}
+
+void ProfilProfesseur::ajouterDevoir()
+{
+    std::cout << "Le professeur rajoute un devoir" << std::endl;
+    gestionnaire_->informer(this, "Nouveau devoir");
 }

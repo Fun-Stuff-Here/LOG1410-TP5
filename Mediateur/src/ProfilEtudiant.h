@@ -6,6 +6,7 @@
 class ProfilEtudiant : public ProfilAbstrait
 {
 public:
-    void messageC();
-    void messageD();
+    void enregistrer();
+    void logInEtudiant();
+    void remettreDevoir();
 };
