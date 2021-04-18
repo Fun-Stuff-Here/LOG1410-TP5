@@ -8,7 +8,7 @@ CXXFLAGS = -std=c++17 -Wall -g
 LDFLAGS = 
 
 # Makefile settings - Can be customized.
-APPNAME = decorateur
+APPNAME = Decorateur
 EXT = .cpp
 SRCDIR = src
 OBJDIR = obj
@@ -77,7 +77,7 @@ cleandepw:
 test: out/tests
 	./out/tests
 
-out/tests: test/tests.o obj/Retroaction.o obj/ElementsAnalyse.o
+out/tests: test/tests.o  obj/ElementsAnalyse.o obj/Retroaction.o 
 	$(CC) $(CXXFLAGS) -o $@ $^ $(LDFLAGS) 
 
 test/tests.o: test/tests.cpp $(wildcard $(SRCDIR)/*)
