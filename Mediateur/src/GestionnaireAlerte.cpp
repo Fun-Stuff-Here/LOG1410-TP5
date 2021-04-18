@@ -7,6 +7,7 @@ GestionnaireAlerte::GestionnaireAlerte(ProfilProfesseur *profilProfesseur, Profi
     profilEtudiant_->setGestionnaire(this);
 }
 
+//Gestionnaire des alertes entre professeur et étudiant------------------------------------------------------------------
 void GestionnaireAlerte::informer(class ProfilAbstrait *role, std::string message) const
 {
     if (message == "Enregistrement réussi")

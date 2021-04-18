@@ -11,6 +11,7 @@
 #include "Retroaction.hpp"
 #include <string>
 
+//CLASS ELEMENTS_ANALYSE--------------------------------------------
 class ElementAnalyse : public RetroactionAbs
 {
 
@@ -26,6 +27,7 @@ public:
     virtual ~ElementAnalyse() = default;
 };
 
+//CLASS COMMENTAIRES_CONSTRUCTIFS--------------------------------------
 class CommentaireConstructif : public ElementAnalyse
 {
 private:
@@ -37,6 +39,7 @@ public:
     ~CommentaireConstructif() = default;
 };
 
+//CLASS CODE_COULEUR_LOGIQUE------------------------------------------
 class CodeCouleurLogique : public ElementAnalyse
 {
     using listeCouleur = std::vector<std::string>;

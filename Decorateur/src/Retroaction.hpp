@@ -11,13 +11,13 @@
 #include <memory>
 #include <vector>
 
+//CLASS RETROACTION_ABS--------------------------------------------
 class RetroactionAbs
 {
 protected:
     using EnregistrementPtr = std::shared_ptr<Enregistrement>;
     using ListeObjectifs = std::vector<std::unique_ptr<ObjectifApprentissage>>;
     using PartitionPtr = std::shared_ptr<Partition>;
-
 
 protected:
     EnregistrementPtr enregistrement_;
@@ -29,16 +29,20 @@ public:
     RetroactionAbs(Partition &partition, Enregistrement &enregistrement);
     virtual ~RetroactionAbs() = default;
 
+    // MÉTHODES VIRTUELLES PURES
     virtual void ajouterObjectifApprentissage(ObjectifApprentissage &objectifApprentissage) = 0;
     virtual EnregistrementPtr lireEnregistrement() = 0;
     virtual PartitionPtr lirePartition() = 0;
     virtual ListeObjectifs &lireObjectifsApprentissage() = 0;
 };
 
+//CLASS RETROCATION-----------------------------------------------
 class Retroaction : public RetroactionAbs
 {
 public:
     Retroaction(Partition &partition, Enregistrement &enregistrement);
+
+    // OVERRIDE DS METHODES VIRTUELLES PURES
     void ajouterObjectifApprentissage(ObjectifApprentissage &objectifApprentissage) override;
     EnregistrementPtr lireEnregistrement() override;
     PartitionPtr lirePartition() override;
