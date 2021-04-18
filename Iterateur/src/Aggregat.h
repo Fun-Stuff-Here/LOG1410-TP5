@@ -4,20 +4,20 @@
 // Auteur : Esme Genereux & Nicolas Depelteau
 ////////////////////////////////////////////////////////////////////
 
-#pragma once
+// #pragma once
 
-#include "Mock.h"
-#include <vector>
+// #include "Mock.h"
+// #include <vector>
 
-template <typename T>
-class Aggregat
-{
-public:
-    virtual std::vector<T>::iterator creerIterateur() = 0;
-    virtual std::vector<T>::iterator begin() = 0;
-    virtual std::vector<T>::iterator end() = 0;
+// template <class T>
+// class Aggregat
+// {
+// public:
+//     virtual std::vector<T>::iterator creerIterateur() = 0;
+//     virtual std::vector<T>::iterator begin() = 0;
+//     virtual std::vector<T>::iterator end() = 0;
 
-    virtual std::vector<T>::iterator_const creerIterateurConst() const = 0;
-    virtual std::vector<T>::iterator_const cbegin() const = 0;
-    virtual std::vector<T>::iterator_const cend() const = 0;
-};
+//     virtual std::vector<T>::iterator_const creerIterateurConst() const = 0;
+//     virtual std::vector<T>::iterator_const cbegin() const = 0;
+//     virtual std::vector<T>::iterator_const cend() const = 0;
+// };

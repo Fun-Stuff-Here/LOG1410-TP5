@@ -9,9 +9,12 @@
 #ifndef LISTE_NOTES_H
 #define LISTE_NOTES_H
 
-#include "Aggregat.h"
+#include "Mock.h"
+#include <vector>
 
-class ListeNotes : public Aggregat<NoteMusicale>
+// #include "Aggregat.h"
+
+class ListeNotes // public Aggregat<NoteMusicale>
 {
     std::vector<NoteMusicale> notesDeMusique_;
 
@@ -20,9 +23,9 @@ public:;
     NoteMusicale &operator++(int index);
     NoteMusicale &operator--(int index);
 
-    std::vector<NoteMusicale>::const_iterator creerIterateurConst() const override;
-    std::vector<NoteMusicale>::const_iterator cbegin() const override;
-    std::vector<NoteMusicale>::const_iterator cend() const override;
+    std::vector<NoteMusicale>::const_iterator creerIterateurConst() const;
+    std::vector<NoteMusicale>::const_iterator cbegin() const;
+    std::vector<NoteMusicale>::const_iterator cend() const;
 };
 
 #endif
